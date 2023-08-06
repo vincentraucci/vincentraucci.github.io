@@ -1,0 +1,22 @@
+:root {
+    --primary-color: rgb(46, 46, 46);
+}
+
+.carousel-img {
+    width: 100vw;
+    height: 33vw;
+    object-fit: contain;
+}
+
+.carousel-blurred-img {
+    width: 100%;
+    position: absolute;
+    filter: blur(75px);
+    background-color: black;
+    object-fit: fill !important;
+    z-index: -10;
+}
+
+/* Small devices (landscape phones, 576px and up) and Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+}
