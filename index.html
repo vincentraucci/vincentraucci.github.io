@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>The Guitar Shop</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="reverb.css" />
@@ -13,7 +13,7 @@
         <!-- 
             Nav Bar
         -->
-        <nav class="navbar sticky-top navbar-expand-md navbar-dark pl-2" style="background-color: rgb(46, 46, 46)">
+        <nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark" style="transition: background-color 200ms linear">
             <img class="mx-3" style="max-width: 50px" src="Images/logo.png" />
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,17 +29,17 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">Products</a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdown01">
+                        <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown01">
                             <a class="dropdown-item nav-link px-4" href="#">Reverb Collection</a>
-                            <a class="dropdown-item nav-link pl-4" href="#">In Store Only</a>
+                            <a class="dropdown-item nav-link px-4" href="#">In Store Only</a>
                             <a class="dropdown-item nav-link px-4" href="#">Rentals</a>
                             <a class="dropdown-item nav-link px-4" href="#">Sheet Music</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdown02">
-                            <a class="dropdown-item nav-link pl-4" href="#">Repairs</a>
+                        <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown02">
+                            <a class="dropdown-item nav-link px-4" href="#">Repairs</a>
                             <a class="dropdown-item nav-link px-4" href="#">Lessons</a>
                         </div>
                     </li>
@@ -47,6 +47,33 @@
                 <div class="nav-text navbar-text mr-3 text-white">The Guitar Shop &nbsp;|&nbsp; Music Store</div>
             </div>
         </nav>
+
+        <!--
+            Hero
+        -->
+        <video playsinline autoplay muted loop class="overflow-hidden position-absolute fixed-top landing-video w-100 h-100" style="z-index: -2">
+            <source src="https://drive.google.com/uc?export=view&id=1_OjdHHPQ0qQ-GjI228Dqu8xExnuPfRq-" type="video/mp4" />
+        </video>
+
+        <div id="video-cover">
+            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white">
+                <div class="p-lg-5 mx-auto my-5">
+                    <h1 class="display-1 font-weight-bold" style="text-shadow: rgba(0, 0, 0, 0.75) 0px 0 25px">The Guitar Shop</h1>
+                    <h2 class="font-weight-normal mb-5" style="text-shadow: black 0px 0 10px">Making musicians, one at a time.</h2>
+                    <a class="hero-button btn btn-lg m-3 btn-outline-warning" href="#">Learn About Us</a>
+                    <a class="hero-button btn btn-lg m-3 btn-outline-warning" href="#">See Products</a>
+                </div>
+                <div class="product-device box-shadow d-none d-md-block"></div>
+                <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <a href="https://reverb.com/shop/vinnys-vault"><img alt="Shop My Store on Reverb" src="//d1g5417jjjo7sf.cloudfront.net/assets/shops/buttons/215x65-black.png" /></a>
+            <div id="reverb_listings">
+                <div data-reverb-embed-listings data-reverb-search-shop="vinnys-vault" data-reverb-search-per-page="100" data-reverb-currency="USD"></div>
+            </div>
+        </div>
 
         <!-- 
             Carousel
@@ -86,35 +113,12 @@
         </div>
         -->
 
-        <!--
-            Hero
-        -->
-        <video autoplay muted loop id="myVideo" class="overflow-hidden position-absolute">
-            <source src="Videos/The_Guitar_Shop_No_Text.mp4" type="video/mp4" />
-        </video>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white">
-            <div class="col-md-6 p-lg-5 mx-auto my-5" style="text-shadow: black 0px 0 20px">
-                <h1 class="display-2 font-weight-bold">The Guitar Shop</h1>
-                <p class="lead font-weight-normal">Making musicians, one at a time.</p>
-                <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-            </div>
-            <div class="product-device box-shadow d-none d-md-block"></div>
-            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-        </div>
-
-        <div class="container mt-5">
-            <a href="https://reverb.com/shop/vinnys-vault"><img alt="Shop My Store on Reverb" src="//d1g5417jjjo7sf.cloudfront.net/assets/shops/buttons/215x65-black.png" /></a>
-            <div id="reverb_listings">
-                <div data-reverb-embed-listings data-reverb-search-shop="vinnys-vault" data-reverb-search-per-page="100" data-reverb-currency="USD"></div>
-            </div>
-        </div>
-
         <div class="container">random text</div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+        <script src="index.js"></script>
         <script src="reverb.js"></script>
     </body>
 </html>
