@@ -1,0 +1,124 @@
+:root {
+    --primary-color: rgb(46, 46, 46);
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+}
+
+p {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+a {
+    color: white;
+}
+a:hover {
+    color: white;
+    text-decoration-color: white;
+}
+
+.divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-black {
+    color: white;
+    /*background-color: black;*/
+    background-color: var(--primary-color);
+}
+
+.nav-transparent {
+    text-shadow: black 0px 0 10px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    background-color: var(--primary-color) !important;
+}
+
+.landing-video {
+    object-fit: cover;
+    height: 50%;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
+}
+
+.carousel-img {
+    width: 100vw;
+    height: 35vw;
+    object-fit: contain;
+}
+
+.carousel-blurred-img {
+    width: 100%;
+    position: absolute;
+    filter: blur(75px);
+    background-color: black;
+    object-fit: fill !important;
+    z-index: -10;
+}
+
+a.text-body-secondary:hover {
+    text-decoration: underline;
+}
+a.store:hover {
+    text-decoration: none;
+}
+
+/* Small devices (landscape phones, 576px and up) and Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+    .sm-hide {
+        display: none;
+    }
+    .landing-video {
+        height: 75%;
+    }
+    h1 {
+        font-size: 3rem !important;
+    }
+    h2 {
+        font-size: 1.25rem !important;
+    }
+    .carousel-img {
+        height: 50vw;
+    }
+    .carousel-title {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 769px) {
+    .md-hide {
+        display: none;
+    }
+    .dropdown-item:hover {
+        background-color: black;
+        transition: background-color 200ms linear;
+        text-decoration: underline;
+    }
+    .carousel-title {
+        font-size: 5rem;
+    }
+}

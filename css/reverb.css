@@ -1,0 +1,234 @@
+/* These are example styles. You can modify to fit the listings to your site */
+.reverb-embedded-listings {
+    list-style-type: none !important;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+.reverb-embedded-listing {
+    position: relative;
+    border-radius: 0.25rem;
+    width: 300px;
+    float: left;
+    margin: 1em;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    list-style-type: none;
+    background-color: white;
+}
+.reverb-embedded-listing a {
+    text-decoration: none;
+    color: #0080a5;
+}
+.reverb-embedded-listing-info {
+    padding: 1em;
+    padding-top: 0;
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    border-radius: 0.25rem;
+}
+.reverb-embedded-listing-title {
+    display: block;
+    color: black;
+    font-size: 1.25rem;
+    overflow: hidden;
+}
+.reverb-embedded-listing-price {
+    text-align: end;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: black;
+}
+.reverb-embedded-listing img {
+    border-radius: 0.25rem;
+    width: 90%;
+    margin: 5%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+.reverb-embedded-listing img:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .reverb-embedded-listing {
+        margin: 0.5rem;
+        width: 150px;
+    }
+    .reverb-embedded-listing-info {
+        height: 6rem;
+        padding: 0.5rem;
+        padding-top: 0;
+    }
+    .reverb-embedded-listing-title,
+    .reverb-embedded-listing-price {
+        font-size: 0.85rem;
+    }
+}
+
+<!-- Horizontal Comparison Shopping styles -- > ul.reverb-embedded-comparison-shopping-pages-horizontal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal li {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-left-content {
+    float: left;
+    width: 120px;
+    height: 120px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-right-content {
+    float: right;
+    width: 400px;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal a {
+    text-decoration: none;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal a:hover img {
+    opacity: 0.9;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal a:hover li {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-prices {
+    color: #333;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-price {
+    margin-right: 10px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-price-amount {
+    font-weight: bold;
+    color: #f6870f;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-summary {
+    overflow: hidden;
+    width: 100%;
+    height: 38px;
+    color: #888;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-horizontal .reverb-embedded-comparison-shopping-page-title {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin: 5px 0 8px 0;
+    font-size: 16px;
+    height: 19px;
+    overflow: hidden;
+}
+
+<!-- Verticle Comparison Shopping Page styles -- > ul.reverb-embedded-comparison-shopping-pages-vertical {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, Sans-Serif;
+    display: inline-block;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical li {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical a {
+    text-decoration: none;
+}
+
+.reverb-embedded-comparison-shopping-page-image-overlay {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.reverb-embedded-comparison-shopping-page-image-overlay img {
+    position: absolute;
+    top: 0;
+}
+
+.reverb-embedded-comparison-shopping-page-image-overlay-gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(62%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 1) 100%); /* W3C */
+    opacity: 0.8;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical .reverb-embedded-comparison-shopping-page-prices {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #fff;
+    bottom: 0;
+    opacity: 0.8;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.reverb-embedded-comparison-shopping-page-bottom-content {
+    position: relative;
+    width: 200px;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical a:hover img {
+    opacity: 0.9;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical a:hover li {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical .reverb-embedded-comparison-shopping-page-summary {
+    display: none;
+}
+
+ul.reverb-embedded-comparison-shopping-pages-vertical .reverb-embedded-comparison-shopping-page-title {
+    display: block;
+    margin: 12px 0 12px 0;
+    box-sizing: border-box;
+    padding: 0 10px 0 10px;
+    color: #333;
+    font-weight: bold;
+    height: 36px;
+    overflow: hidden;
+}
