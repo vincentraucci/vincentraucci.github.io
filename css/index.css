@@ -6,6 +6,7 @@ body {
     background-color: var(--primary-color);
     font-family: "Outfit", sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 p {
@@ -50,10 +51,6 @@ a:hover {
     background-color: var(--primary-color);
 }
 
-.nav-transparent {
-    text-shadow: black 0px 0 10px;
-}
-
 .dropdown-item:hover {
     background-color: transparent;
     text-decoration: underline;
@@ -63,7 +60,7 @@ a:hover {
 .landing-video {
     object-fit: cover;
     height: 50%;
-    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
 }
 
 .carousel-img {
