@@ -3,6 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+        <meta name="author" content="Michael Peluso" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta property="og:title" content="The Guitar Shop" />
+        <meta property="og:url" content="http://theguitarshop.co/" />
+        <meta property="og:image" content="Images/Photos/the_guitar_shop_thumbnail_03.png" src="Images/Photos/the_guitar_shop_thumbnail_03.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
+
         <title>The Guitar Shop</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,9 +29,9 @@
             Nav Bar
         -->
         <nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark" style="transition: background-color 200ms linear">
-            <img class="mx-3" style="max-width: 50px" src="Images/Icons/logo.png" />
+            <img class="mx-3" style="max-width: 50px" src="Images/Icons/logo.png" alt="The Guitar Shop Logo" />
             <button class="navbar-toggler border-0 m-0 p-0" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="Images/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" />
+                <img src="Images/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" alt="Open/Close" />
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample04" style="font-size: large">
@@ -61,8 +72,9 @@
         <!--
             Hero
         -->
-        <video playsinline autoplay muted loop class="overflow-hidden position-absolute fixed-top landing-video w-100 h-100" style="z-index: -2">
-            <source src="https://drive.google.com/uc?export=view&id=1_OjdHHPQ0qQ-GjI228Dqu8xExnuPfRq-" type="video/mp4" />
+        <video preload playsinline autoplay muted loop poster class="overflow-hidden position-absolute fixed-top landing-video w-100 h-100" style="z-index: -2">
+            <source src="https://drive.google.com/uc?export=view&id=1_OjdHHPQ0qQ-GjI228Dqu8xExnuPfRq-" type="video/mp4" alt="Guitar" />
+            <!-- Name of guitar? -->
         </video>
 
         <div id="video-cover">
@@ -111,7 +123,7 @@
             <div class="carousel-inner" style="text-shadow: rgba(0, 0, 0, 0.75) 0px 0 20px">
                 <div class="carousel-item active">
                     <img class="carousel-blurred-img" src="Images/Photos/shop1.png" />
-                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop1.png" alt="First slide" />
+                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop1.png" alt="Inside image of The Guitar Shop" />
                     <span class="carousel-caption d-none d-md-block text-dark h-25 w-50 m-auto" style="bottom: -10%; filter: blur(75px); background-color: black"></span>
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title p-4 pb-sm-0">Products</h5>
@@ -121,7 +133,7 @@
                 </div>
                 <div class="carousel-item">
                     <img class="carousel-blurred-img" src="Images/Photos/shop2.jpg" />
-                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Second slide" />
+                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Inside image of The Guitar Shop" />
                     <span class="carousel-caption d-none d-md-block text-dark h-25 w-50 m-auto" style="bottom: -10%; filter: blur(75px); background-color: black"></span>
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title p-4 pb-sm-0">Rentals</h5>
@@ -131,7 +143,7 @@
                 </div>
                 <div class="carousel-item">
                     <img class="carousel-blurred-img" src="Images/Photos/shop2.jpg" />
-                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Second slide" />
+                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Inside image of The Guitar Shop" />
                     <span class="carousel-caption d-none d-md-block text-dark h-25 w-50 m-auto" style="bottom: -10%; filter: blur(75px); background-color: black"></span>
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title p-4 pb-sm-0">Lessons</h5>
@@ -141,7 +153,7 @@
                 </div>
                 <div class="carousel-item">
                     <img class="carousel-blurred-img" src="Images/Photos/shop2.jpg" />
-                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Second slide" />
+                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Inside image of The Guitar Shop" />
                     <span class="carousel-caption d-none d-md-block text-dark h-25 w-50 m-auto" style="bottom: -10%; filter: blur(75px); background-color: black"></span>
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title p-4 pb-sm-0">Meet the Owner</h5>
@@ -151,7 +163,7 @@
                 </div>
                 <div class="carousel-item">
                     <img class="carousel-blurred-img" src="Images/Photos/shop2.jpg" />
-                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Second slide" />
+                    <img class="d-block w-100 carousel-img" src="Images/Photos/shop2.jpg" alt="Inside image of The Guitar Shop" />
                     <span class="carousel-caption d-none d-md-block text-dark h-25 w-50 m-auto" style="bottom: -10%; filter: blur(75px); background-color: black"></span>
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title p-4 pb-sm-0">Sheet Music</h5>
@@ -325,7 +337,7 @@
                     </div>
                 </footer>
             </div>
-            <img src="Images/Icons/logo.png" class="bi me-2 mb-4 pb-5" width="100" />
+            <img src="Images/Icons/logo.png" class="bi me-2 mb-4 pb-5" width="100" alt="The Guitar Shop Logo" />
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
