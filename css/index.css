@@ -51,6 +51,10 @@ a:hover {
     background-color: var(--primary-color);
 }
 
+.nav-shadow {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
 .dropdown-item:hover {
     background-color: transparent;
     text-decoration: underline;
@@ -117,5 +121,15 @@ a.store:hover {
     }
     .carousel-title {
         font-size: 5rem;
+    }
+    .zoom {
+        position: inherit;
+        transition: transform 0.2s;
+    }
+    .zoom:hover {
+        z-index: 10;
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5);
     }
 }
