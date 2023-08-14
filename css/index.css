@@ -33,6 +33,11 @@ a:hover {
     color: white;
     text-decoration-color: white;
 }
+.btn:focus,
+a:focus,
+input:focus {
+    outline: none;
+}
 
 .divider {
     width: 100%;
@@ -54,8 +59,18 @@ a:hover {
     background-color: var(--primary-color);
 }
 
+.btn {
+    transition: 0.2s;
+}
+
+/*
+    Nav Bar
+*/
 .nav-shadow {
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+    transition: 0.2s;
 }
 
 .dropdown-item:hover {
@@ -106,6 +121,27 @@ a.store:hover {
 }
 
 /*
+    Contact
+*/
+label {
+    font-weight: 200;
+    font-size: 1.25rem;
+}
+.form-control {
+    caret-color: gold;
+    color: white;
+    background-color: transparent;
+    transition: 0.2s;
+}
+.form-control:focus {
+    border-color: gold;
+    color: gold;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/*
   Responsiveness
 */
 /* Small devices (landscape phones, 576px and up) and Medium devices (tablets, 768px and up)*/
@@ -118,7 +154,7 @@ a.store:hover {
         height: 75%;
     }
     h1 {
-        font-size: 3rem !important;
+        font-size: 2rem !important;
     }
     h2 {
         font-size: 1.25rem !important;
@@ -126,6 +162,12 @@ a.store:hover {
     p {
         font-size: 1rem !important;
     }
+
+    /* Nav Bar */
+    .nav-shadow {
+        box-shadow: none;
+    }
+
     /* Home */
     .carousel-img {
         height: 50vw;
@@ -133,6 +175,7 @@ a.store:hover {
     .carousel-title {
         font-size: 3rem;
     }
+
     /* Meet the Owner*/
     .dot {
         width: 15px;
@@ -149,16 +192,9 @@ a.store:hover {
     .md-hide {
         display: none;
     }
-    .dropdown-item:hover {
-        background-color: black;
-        transition: background-color 200ms linear;
-        text-decoration: underline;
+    .btn:hover {
+        transform: scale(1.1);
     }
-    /* Home */
-    .carousel-title {
-        font-size: 5rem;
-    }
-    /* Store Information */
     .zoom {
         position: inherit;
         transition: transform 0.2s;
@@ -169,4 +205,17 @@ a.store:hover {
         -webkit-transform: scale(1.5); /* Safari 3-8 */
         transform: scale(1.5);
     }
+    /* Nav Bar */
+    .dropdown-item:hover {
+        background-color: black;
+        transition: background-color 200ms linear;
+        text-decoration: underline;
+    }
+
+    /* Home */
+    .carousel-title {
+        font-size: 5rem;
+    }
+
+    /* Store Information */
 }
