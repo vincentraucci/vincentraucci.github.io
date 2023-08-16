@@ -24,6 +24,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/index.css" />
+        <link rel="stylesheet" href="/css/reverb.css" />
     </head>
     <body>
         <!-- 
@@ -71,33 +72,29 @@
         </nav>
 
         <!--
+            Join Our Mailing List
+        -->
+        <div style="padding: 4rem 0; background-color: rgba(0, 0, 0, 0.1); box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15)">
+            <a class="big-button text-dark d-flex flex-column" href="https://groups.google.com/forum/#!forum/theguitarshopnews/join" target="_blank">
+                <p class="text-dark m-0">Click here to</p>
+                <span class="text-dark">Join Our Mailing List</span>
+            </a>
+        </div>
+
+        <!--
             Header
         -->
         <div class="m-5"></div>
 
         <!--
-            Store Details
-        -->
-        <div class="container px-4 text-light" id="featured-3">
-            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Contact Us</h1>
-            <p class="text-muted pt-4 pb-2 text-center">Below describes how to get in touch with our team.</p>
-            <div class="d-flex justify-content-center">
-                <a class="hero-button btn btn-lg mb-4 mt-1 btn-outline-warning" href="https://groups.google.com/forum/#!forum/theguitarshopnews/join" target="_blank">Join Our Mailing List</a>
-            </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="divider my-5"></div>
-
-        <!--
             Email Us
         -->
-        <div class="container px-4" id="featured-3">
-            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Email Our Team</h1>
+        <div class="container px-4 mt-5" id="featured-3" box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15)>
+            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Email our Team</h1>
             <p class="text-muted pt-4 mb-4 text-center">Help us help you.</p>
         </div>
-        <div class="container my-5">
-            <form class="text-white" method="post" action="mailto:developer@theguitarshop.co">
+        <div class="container mt-4 py-2">
+            <form id="send-email" class="text-white" method="post" action="https://formspree.io/f/xdoreywo">
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputName">Full Name</label>
@@ -109,17 +106,126 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputLName">Subject</label>
-                        <input name="subject" class="form-control" id="inputSubject" placeholder="Saying Hello!" />
+                        <input name="subject_variable" class="form-control" id="inputSubject" placeholder="Saying Hello!" />
+                        <input name="subject" type="hidden" value="{{ name }}: {{ subject_variable }}" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Email Contents</label>
                     <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Hello to all at The Guitar Shop!"></textarea>
                 </div>
-                <div class="d-flex justify-content-center p-3">
-                    <input type="submit" class="btn btn-outline-warning" value="Send to developer@theguitarshop.co" />
+                <label>&nbsp;</label>
+                <div class="d-flex justify-content-center">
+                    <input type="submit" class="btn btn-lg btn-outline-warning" value="Send to developer@theguitarshop.co" />
                 </div>
             </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider my-5"></div>
+
+        <!--
+            Reach Our Team
+        -->
+        <div class="container px-4 text-light" id="featured-3">
+            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Reach Our Team</h1>
+            <p class="text-muted pt-4 pb-2 text-center">Below describes how to get in touch with our team.</p>
+        </div>
+        <div class="d-flex flex-column text-center">
+            <h2 class="contact-section col-3 align-self-center border-bottom pb-3 pt-4">Staff</h2>
+            <div class="d-flex justify-content-center w-100 flex-wrap py-3">
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">Paul Raucci</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Store Owner</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">Vincent Raucci</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Store Manger</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">Tommy Raucci</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Store Manger</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="contact-section col-3 align-self-center border-bottom pb-3 pt-4">Teachers</h2>
+            <div class="d-flex justify-content-center w-100 flex-wrap py-3">
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">Johnny Dey</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Lead Teacher</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">Paul Raucci Jr.</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Teacher</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">Brian Tess</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Teacher</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                    <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <div class="mt-5 mb-2">
+                        <h2 class="name m-0" style="font-weight: 400">John Corallo</h2>
+                        <p class="text-muted m-0" style="font-weight: 400">Teacher</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <a class="hero-button btn btn-lg mt-3 mb-5 btn-outline-warning" href="https://groups.google.com/forum/#!forum/theguitarshopnews/join" target="_blank">Join Our Mailing List</a>
+            </div>
         </div>
 
         <!-- 
