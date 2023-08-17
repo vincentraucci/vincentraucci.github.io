@@ -7,11 +7,11 @@
         <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
         <meta name="author" content="Michael Peluso" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/Images/Other/logo.png" />
+        <link rel="icon" href="Images/Other/logo.png" />
 
         <meta property="og:title" content="The Guitar Shop" />
         <meta property="og:url" content="http://theguitarshop.co/" />
-        <meta property="og:image" content="Images/Photos/the_guitar_shop_thumbnail_03.png" src="/Images/Photos/the_guitar_shop_thumbnail_03.png" />
+        <meta property="og:image" content="Images/Photos/the_guitar_shop_thumbnail_03.png" src="Images/Photos/the_guitar_shop_thumbnail_03.png" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
 
@@ -20,39 +20,37 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <script src="https://apis.google.com/js/api.js"></script>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/index.css" />
-        <link rel="stylesheet" href="/css/reverb.css" />
     </head>
     <body>
         <!-- 
             Nav Bar
         -->
-        <nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark bg-black" style="box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1)">
-            <img class="mx-3" style="max-width: 50px" src="/Images/Other/logo.png" />
+        <nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark" style="transition: background-color 200ms linear">
+            <a href="index.html" title="Home"><img class="mx-3 zoom" style="max-width: 50px" src="/Images/Other/logo.png" alt="Logo" /></a>
             <button class="navbar-toggler border-0 m-0 p-0" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="/Images/Other/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" />
+                <img src="/Images/Other/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" alt="Open/Close" />
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample04" style="font-size: large">
                 <ul class="navbar-nav mr-auto" style="gap: 20px">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">About Us</a>
-                        <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown01">
-                            <a class="dropdown-item nav-link px-4" href="/about_us/store_information.html">Store Information</a>
-                            <a class="dropdown-item nav-link px-4" href="/about_us/meet_the_owner.html">Meet the Owner</a>
-                            <a class="dropdown-item nav-link px-4" href="/about_us/faq.html">FAQ</a>
-                            <a class="dropdown-item nav-link px-4" href="/about_us/contact.html">Contact</a>
+                        <div class="dropdown-menu border-0" style="background-color: rgb(46, 46, 46)" aria-labelledby="dropdown01">
+                            <a class="dropdown-item nav-link px-4" href="store_information.html">Store Information</a>
+                            <a class="dropdown-item nav-link px-4" href="meet_the_owner.html">Meet the Owner</a>
+                            <a class="dropdown-item nav-link px-4" href="faq.html">FAQ</a>
+                            <a class="dropdown-item nav-link px-4" href="contact.html">Contact</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">Products</a>
-                        <div class="dropdown-menu bg-transparent border-0 nav-shadow" style="transition: background-color 200ms linear" aria-labelledby="dropdown01">
+                        <div class="dropdown-menu border-0" style="background-color: rgb(46, 46, 46)" aria-labelledby="dropdown02">
                             <a class="dropdown-item nav-link px-4" href="#">Reverb Collection</a>
                             <a class="dropdown-item nav-link px-4" href="#">In Store Only</a>
                             <a class="dropdown-item nav-link px-4" href="#">Rentals</a>
@@ -61,9 +59,10 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu bg-transparent border-0 nav-shadow" style="transition: background-color 200ms linear" aria-labelledby="dropdown02">
+                        <div class="dropdown-menu border-0" style="background-color: rgb(46, 46, 46)" aria-labelledby="dropdown03">
                             <a class="dropdown-item nav-link px-4" href="#">Repairs</a>
                             <a class="dropdown-item nav-link px-4" href="#">Lessons</a>
+                            <a class="dropdown-item nav-link px-4" href="#">Trade-Ins</a>
                         </div>
                     </li>
                 </ul>
@@ -132,9 +131,9 @@
             <p class="text-muted pt-4 pb-2 text-center">Below describes how to get in touch with our team.</p>
         </div>
         <div class="d-flex flex-column text-center">
-            <h2 class="contact-section col-3 align-self-center border-bottom pb-3 pt-4">Staff</h2>
+            <h2 class="col-6 col-md-3 align-self-center border-bottom pb-3 pt-4">Staff</h2>
             <div class="d-flex justify-content-center w-100 flex-wrap py-3">
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">Paul Raucci</h2>
@@ -146,7 +145,7 @@
                         <a href="#">LinkedIn</a>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">Vincent Raucci</h2>
@@ -158,7 +157,7 @@
                         <a href="#">LinkedIn</a>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">Tommy Raucci</h2>
@@ -171,9 +170,9 @@
                     </div>
                 </div>
             </div>
-            <h2 class="contact-section col-3 align-self-center border-bottom pb-3 pt-4">Teachers</h2>
+            <h2 class="col-6 col-md-3 align-self-center border-bottom pb-3 pt-4">Teachers</h2>
             <div class="d-flex justify-content-center w-100 flex-wrap py-3">
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">Johnny Dey</h2>
@@ -185,7 +184,7 @@
                         <a href="#">LinkedIn</a>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">Paul Raucci Jr.</h2>
@@ -197,7 +196,7 @@
                         <a href="#">LinkedIn</a>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">Brian Tess</h2>
@@ -209,7 +208,7 @@
                         <a href="#">LinkedIn</a>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="min-width: 250px; box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33)">
+                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center">
                     <img src="/Images/Products/Sheet_Music.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
                     <div class="mt-5 mb-2">
                         <h2 class="name m-0" style="font-weight: 400">John Corallo</h2>
@@ -238,10 +237,10 @@
                         <h5 class="text-white">About Us</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Store Information</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Meet the Owner</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                            <li class="nav-item mb-2"><a href="store_information.html" class="nav-link p-0 text-body-secondary">Store Information</a></li>
+                            <li class="nav-item mb-2"><a href="meet_the_owner.html" class="nav-link p-0 text-body-secondary">Meet the Owner</a></li>
+                            <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+                            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col mb-3">
@@ -279,7 +278,7 @@
                     </div>
                 </footer>
             </div>
-            <img src="/Images/Other/logo.png" class="zoom bi me-2 mb-4 pb-5" width="100" />
+            <a class="nav-link" href="/index.html"><img src="/Images/Other/logo.png" class="zoom bi me-2 mb-4 pb-5" width="100" alt="The Guitar Shop Logo" /></a>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

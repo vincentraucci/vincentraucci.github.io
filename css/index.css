@@ -163,8 +163,32 @@ a.store:hover {
     background-color: transparent;
 }
 
-.name {
-    font-size: xx-large !important;
+.contact {
+    min-width: 250px;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.33);
+    transition: 0.2s;
+    &:hover {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.1);
+        box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.5);
+    }
+}
+
+/*
+    In Store Only
+*/
+.piechart {
+    margin-top: 300px;
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: conic-gradient(pink 70deg, lightblue 0 235deg, orange 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*
