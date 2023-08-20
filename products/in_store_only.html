@@ -7,11 +7,11 @@
         <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
         <meta name="author" content="Michael Peluso" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="Images/Other/logo.png" />
+        <link rel="icon" href="/Images/Icons/logo.png" />
 
         <meta property="og:title" content="The Guitar Shop" />
         <meta property="og:url" content="http://theguitarshop.co/" />
-        <meta property="og:image" content="Images/Photos/the_guitar_shop_thumbnail_03.png" src="Images/Photos/the_guitar_shop_thumbnail_03.png" />
+        <meta property="og:image" content="/Images/Open_Graph/the_guitar_shop_thumbnail_01.png" src="/Images/Open_Graph/the_guitar_shop_thumbnail_01.png" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
 
@@ -29,9 +29,9 @@
             Nav Bar
         -->
         <nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark" style="transition: background-color 200ms linear">
-            <a href="index.html" title="Home"><img class="mx-3 zoom" style="max-width: 50px" src="/Images/Other/logo.png" alt="Logo" /></a>
+            <a href="index.html" title="Home"><img class="mx-3 zoom" style="max-width: 50px" src="/Images/Icons/logo.png" alt="Logo" /></a>
             <button class="navbar-toggler border-0 m-0 p-0" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="/Images/Other/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" alt="Open/Close" />
+                <img src="/Images/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" alt="Open/Close" />
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample04" style="font-size: large">
@@ -76,7 +76,7 @@
         <div class="m-5"></div>
 
         <!--
-            Store Details
+            Overview
         -->
         <div class="container px-4 text-light" id="featured-3">
             <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Overview</h1>
@@ -88,77 +88,112 @@
                 seasoned professional seeking that elusive vintage gem or a beginner on the hunt for affordable, quality instruments, our shelves are stocked with uncovered supersizes.
             </p>
         </div>
+        <div class="container px-4 text-white pt-4" id="featured-3">
+            <h3 class="text-warning">Notice</h3>
+            <p>
+                &emsp; Due to the unique nature of our business, we regrettably cannot provide precise item specifications or assure consistent restocking. As a result, the following outlines the broad categories of products typically available in
+                our inventory.
+            </p>
+        </div>
 
         <!-- Divider -->
         <div class="divider my-5"></div>
 
         <!--
-            Pie Chart
+            Products We Offer
         -->
+        <div class="container px-4 text-light" id="featured-3">
+            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Products We Offer</h1>
+            <p class="text-muted pt-4 mb-5 mb-sm-1 text-center">Discover our musical assortment through a visual representation.</p>
+        </div>
         <div class="d-flex flex-sm-row flex-column justify-content-center align-items-center">
             <div class="piechart mb-sm-0 mb-5">
                 <div class="piechart-inner"></div>
             </div>
             <div style="width: 10vw"></div>
-            <div class="text-center col-sm-4 col-10">
-                <h2 class="text-white border-bottom pb-4">Products We Offer</h2>
+            <div class="text-left col-sm-4 col-10">
                 <ul class="list-group list-group-flush pt-1">
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0"></div>
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(255, 255, 255, 1)"></div>
-                            <p class="mb-0">Guitars</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Guitars</h3>
                         </div>
-                        <p class="text-muted" style="font-size: 1rem">Acoustic, Electric, Electro-acoustic, Bass Guitars, Ukeleles</p>
+                        <p class="text-muted" style="font-size: 1rem">Acoustic, Electric, Electro-acoustic, Bass Guitars, Ukuleles</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(200, 200, 200, 0.7)"></div>
-                            <p class="mb-0">Amplifiers</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Amplifiers</h3>
                         </div>
-                        <p class="text-muted" style="font-size: 1rem">Classes A, B, AB, C, D</p>
+                        <p class="text-muted" style="font-size: 1rem !important">Classes A, B, AB, C, D</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(255, 255, 255, 0.5)"></div>
-                            <p class="mb-0">Accessories</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Accessories</h3>
                         </div>
                         <p class="text-muted" style="font-size: 1rem">Cases, Cables, Tools, Stands, Strings, Picks</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(255, 255, 255, 0.35)"></div>
-                            <p class="mb-0">Keyboards</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Keyboards</h3>
                         </div>
                         <p class="text-muted" style="font-size: 1rem">Electric keyboards, Electric pianos, Stage pianos, Synthesizers</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(255, 255, 255, 0.2)"></div>
-                            <p class="mb-0">Drums</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Drums</h3>
                         </div>
                         <p class="text-muted" style="font-size: 1rem">Snares, Toms, Cymbals</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(255, 255, 255, 0.1)"></div>
-                            <p class="mb-0">Brass</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Brass</h3>
                         </div>
                         <p class="text-muted" style="font-size: 1rem">Trumpets, Trombones, French Horns</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1">
-                        <div class="d-flex justify-content-center align-items-center mb-1">
+                    <div class="list-group-item bg-transparent my-0 pt-3 pb-1">
+                        <div class="d-flex align-items-baseline mb-2">
                             <div class="dot mr-3" style="border: none; background-color: rgb(255, 255, 255, 0.05)"></div>
-                            <p class="mb-0">Sheet Music</p>
+                            <h3 class="text-white mb-0" style="font-weight: 200">Sheet Music</h3>
                         </div>
                         <p class="text-muted" style="font-size: 1rem">Classical, Jazz, Rock, Blues</p>
                     </div>
-                    <div class="list-group-item bg-transparent my-0 pt-2 pb-1"></div>
+                    <div></div>
                 </ul>
             </div>
         </div>
 
         <!-- Divider -->
         <div class="divider my-5"></div>
+
+        <!--
+            Common Brands
+        -->
+        <div class="container px-4 text-light pb-1" id="featured-3">
+            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Common Brands</h1>
+            <p class="text-muted pt-4 mb-5 mb-sm-1 text-center">Leading names in our collection.</p>
+        </div>
+        <div class="d-flex justify-content-center text-center pt-4 pb-5">
+            <div class="container row row-cols-2 row-cols-md-3">
+                <div class="col">
+                    <p>Lorem ipsum</p>
+                    <p>Lorem ipsum</p>
+                </div>
+                <div class="col">
+                    <p>Lorem ipsum</p>
+                    <p>Lorem ipsum</p>
+                </div>
+                <div class="col">
+                    <p>Lorem ipsum</p>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+        </div>
 
         <!-- 
             Footer
@@ -211,7 +246,7 @@
                     </div>
                 </footer>
             </div>
-            <a class="nav-link" href="/index.html"><img src="/Images/Other/logo.png" class="zoom bi me-2 mb-4 pb-5" width="100" alt="The Guitar Shop Logo" /></a>
+            <a class="nav-link" href="/index.html"><img src="/Images/Icons/logo.png" class="zoom bi me-2 mb-4 pb-5" width="100" alt="The Guitar Shop Logo" /></a>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
