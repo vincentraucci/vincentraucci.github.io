@@ -64,6 +64,11 @@ input:focus {
 
 .btn {
     transition: 0.2s;
+    color: gold;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .shadow {
@@ -325,5 +330,8 @@ a.store:hover {
         font-size: 5rem;
     }
 
-    /* Store Information */
+    /* Contact */
+    .big-button:hover {
+        transform: scale(1.1);
+    }
 }

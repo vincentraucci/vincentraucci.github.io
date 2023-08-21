@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            fetch("/txt/head.txt")
+                .then((response) => response.text())
+                .then((data) => {
+                    $("head").append(data);
+                });
+        </script>
+    </head>
+    <body>
+        <!-- 
+            Nav Bar
+        -->
+        <nav></nav>
+
+        <!--
+            Header
+        -->
+        <div class="m-5"></div>
+
+        <!--
+            Our Online Showcase
+        -->
+        <div class="container px-4 text-light" id="featured-3">
+            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Our Online Showcase</h1>
+            <p class="text-muted pt-4 mb-4 text-center">Browse a selection of premier products available for online purchase.</p>
+        </div>
+        <div class="container px-4 text-white" id="featured-3">
+            <h3 class="text-warning">Notice</h3>
+            <p>
+                &emsp;The following represents our available products showcased on our online platform. Please note that this compilation simply offers a glimpse into the diverse range of items we offer. For a comprehensive overview of our complete
+                inventory, we encourage you to visit our store in person.
+            </p>
+        </div>
+        <div class="d-flex justify-content-center pt-4 pb-5">
+            <a href="/products/in_store_only.html" class="btn btn-lg btn-outline-warning mx-3">In-Store Collection</a>
+            <a href="/about_us/contact.html" class="btn btn-lg btn-outline-warning mx-3">Contact Us</a>
+            <a href="/about_us/faq.html" class="btn btn-lg btn-outline-warning mx-3">Frequently Asked Questions</a>
+        </div>
+
+        <!-- 
+            Footer
+        -->
+        <footer></footer>
+
+        <!--
+            Scripts
+        -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="/js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
+<meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+<meta name="author" content="Michael Peluso" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/Images/Icons/logo.png" />
+
+<meta property="og:title" content="The Guitar Shop" />
+<meta property="og:url" content="http://theguitarshop.co/" />
+<meta property="og:image" content="/Images/Photos/the_guitar_shop_thumbnail_01.png" src="Images/Open_Graph/the_guitar_shop_thumbnail_01.png" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
+
+<title>The Guitar Shop</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/reverb.css" />
+<link rel="stylesheet" href="/css/index.css" />

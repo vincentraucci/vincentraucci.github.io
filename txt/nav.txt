@@ -1,0 +1,42 @@
+<nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark" style="transition: background-color 200ms linear">
+    <a href="/index.html" title="Home"><img class="mx-3 zoom" style="max-width: 50px" src="/Images/Icons/logo.png" alt="Logo" /></a>
+    <button class="navbar-toggler border-0 m-0 p-0" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="/Images/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" alt="Open/Close" />
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04" style="font-size: large">
+        <ul class="navbar-nav mr-auto" style="gap: 20px">
+            <li id="nav-home" class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li id="nav-about_us" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">About Us</a>
+                <!-- 'bg-transparent' class for only 'Home' page -->
+                <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown01">
+                    <a class="dropdown-item nav-link px-4" href="/about_us/store_information.html">Store Information</a>
+                    <a class="dropdown-item nav-link px-4" href="/about_us/meet_the_owner.html">Meet the Owner</a>
+                    <a class="dropdown-item nav-link px-4" href="/about_us/faq.html">FAQ</a>
+                    <a class="dropdown-item nav-link px-4" href="/about_us/contact.html">Contact</a>
+                </div>
+            </li>
+            <li id="nav-products" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">Products</a>
+                <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown02">
+                    <a class="dropdown-item nav-link px-4" href="/products/reverb_collection.html">Reverb Collection</a>
+                    <a class="dropdown-item nav-link px-4" href="/products/in_store_only.html">In Store Only</a>
+                    <a class="dropdown-item nav-link px-4" href="/products/rentals.html">Rentals</a>
+                    <a class="dropdown-item nav-link px-4" href="/products/sheet_music.html">Sheet Music</a>
+                </div>
+            </li>
+            <li id="nav-services" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown">Services</a>
+                <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown03">
+                    <a class="dropdown-item nav-link px-4" href="/services/repairs.html">Repairs</a>
+                    <a class="dropdown-item nav-link px-4" href="/services/lessons.html">Lessons</a>
+                    <a class="dropdown-item nav-link px-4" href="/services/trade_ins.html">Trade-Ins</a>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-text navbar-text mr-3 text-white sm-hide">The Guitar Shop &nbsp;|&nbsp; Music Store</div>
+    </div>
+</nav>
