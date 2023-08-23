@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
-        <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
-        <meta name="author" content="Michael Peluso" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="Images/Icons/logo.png" />
-
-        <meta property="og:title" content="The Guitar Shop" />
-        <meta property="og:url" content="http://theguitarshop.co/" />
-        <meta property="og:image" content="Images/Photos/the_guitar_shop_thumbnail_01.png" src="Images/Open_Graph/the_guitar_shop_thumbnail_01.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content="A popular musical instrument store offering instrumental products, rentals, repairs, and lessons located in Howell Township, New Jersey." />
-
-        <title>The Guitar Shop</title>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <!-- Only for 'Home' -->
         <link rel="stylesheet" href="css/reverb.css" />
         <link rel="stylesheet" href="css/index.css" />
     </head>
@@ -30,48 +9,7 @@
         <!-- 
             Nav Bar
         -->
-        <nav id="main-nav" class="navbar sticky-top navbar-expand-md pl-2 navbar-dark" style="transition: background-color 200ms linear">
-            <a href="index.html" title="Home"><img class="mx-3 zoom" style="max-width: 50px" src="Images/Icons/logo.png" alt="Logo" /></a>
-            <button class="navbar-toggler border-0 m-0 p-0" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="Images/Other/Icons/plus.png" class="toggleImage img-fluid mx-3" style="max-width: 45px; transition: 0.25s" alt="Open/Close" />
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExample04" style="font-size: large">
-                <ul class="navbar-nav mr-auto" style="gap: 20px">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">About Us</a>
-                        <!-- 'bg-transparent' class for only 'Home' page -->
-                        <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown01">
-                            <a class="dropdown-item nav-link px-4" href="/about_us/store_information.html">Store Information</a>
-                            <a class="dropdown-item nav-link px-4" href="/about_us/meet_the_owner.html">Meet the Owner</a>
-                            <a class="dropdown-item nav-link px-4" href="/about_us/faq.html">FAQ</a>
-                            <a class="dropdown-item nav-link px-4" href="/about_us/contact.html">Contact</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown">Products</a>
-                        <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown02">
-                            <a class="dropdown-item nav-link px-4" href="#">Reverb Collection</a>
-                            <a class="dropdown-item nav-link px-4" href="#">In Store Only</a>
-                            <a class="dropdown-item nav-link px-4" href="#">Rentals</a>
-                            <a class="dropdown-item nav-link px-4" href="#">Sheet Music</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu bg-transparent border-0" style="transition: background-color 200ms linear" aria-labelledby="dropdown03">
-                            <a class="dropdown-item nav-link px-4" href="#">Repairs</a>
-                            <a class="dropdown-item nav-link px-4" href="#">Lessons</a>
-                            <a class="dropdown-item nav-link px-4" href="#">Trade-Ins</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="nav-text navbar-text mr-3 text-white sm-hide">The Guitar Shop &nbsp;|&nbsp; Music Store</div>
-            </div>
-        </nav>
+        <nav id="main-nav" style="transition: background-color 200ms linear"></nav>
 
         <!--
             Hero
@@ -86,8 +24,8 @@
                 <div class="p-lg-5 mx-auto my-5">
                     <h1 class="display-1 font-weight-bold" style="text-shadow: rgba(0, 0, 0, 0.75) 0px 0 25px" title="That's Us!">The Guitar Shop</h1>
                     <h2 class="font-weight-normal mb-5" style="text-shadow: black 0px 0 10px" title="That's what we do!">Making musicians, one at a time.</h2>
-                    <a class="hero-button btn btn-lg m-3 btn-warning" href="#" title="See our store hours and policies.">Learn About Us</a>
-                    <a class="hero-button btn btn-lg m-3 btn-warning" href="#" title="See our in store collection.">See Products</a>
+                    <a class="hero-button btn btn-lg m-3 btn-warning" href="/about_us/store_information.html" title="See our store hours and policies.">Learn About Us</a>
+                    <a class="hero-button btn btn-lg m-3 btn-warning" href="/products/in_store_only.html" title="See our in store collection.">See Products</a>
                 </div>
                 <div class="product-device box-shadow d-none d-md-block"></div>
                 <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -96,6 +34,7 @@
                 <a href="https://reverb.com/shop/theguitarshopnj" target="_blank" rel="noopener noreferrer"
                     ><img alt="See our online Reverb listings." title="See our online Reverb listings." src="//d1g5417jjjo7sf.cloudfront.net/assets/shops/buttons/215x65-black.png"
                 /></a>
+                <!-- data-reverb-search-condition="new" -->
             </span>
         </div>
 
@@ -108,11 +47,13 @@
         </div>
         <div class="contained co;-12 d-flex justify-content-center">
             <div id="reverb_listings">
-                <div data-reverb-embed-listings data-reverb-search-shop="theguitarshopnj" data-reverb-search-per-page="4" data-reverb-currency="USD"></div>
+                <div data-reverb-embed-listings data-reverb-search-shop="theguitarshopnj" data-reverb-search-per-page="4" data-reverb-currency="USD" data-reverb-search-category=""></div>
             </div>
         </div>
         <div class="d-flex justify-content-center pt-5">
-            <button class="btn btn-lg btn-outline-warning">See All Listings</button>
+            <a href="/products/reverb_collection.html">
+                <button class="btn btn-lg btn-outline-warning">See All Listings</button>
+            </a>
         </div>
 
         <!-- Divider -->
@@ -137,7 +78,9 @@
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title pb-3 pb-sm-0">Products</h5>
                         <p class="d-none d-sm-block pb-3">See our stock</p>
-                        <button class="btn btn-warning">Learn More</button>
+                        <a href="/products/in_store_only.html">
+                            <button class="btn btn-warning">Learn More</button>
+                        </a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -147,7 +90,9 @@
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title pb-3 pb-sm-0">Rentals</h5>
                         <p class="d-none d-sm-block pb-3">Non-binding practice</p>
-                        <button class="btn btn-warning">Learn More</button>
+                        <a href="/products/rentals.html">
+                            <button class="btn btn-warning">Learn More</button>
+                        </a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -157,7 +102,9 @@
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title pb-3 pb-sm-0">Repairs</h5>
                         <p class="d-none d-sm-block pb-3">Get your gear back in shape</p>
-                        <button class="btn btn-warning">Learn More</button>
+                        <a href="/services/repairs.html">
+                            <button class="btn btn-warning">Learn More</button>
+                        </a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -167,17 +114,21 @@
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title pb-3 pb-sm-0">Lessons</h5>
                         <p class="d-none d-sm-block pb-3">Learn new skills</p>
-                        <button class="btn btn-warning">Learn More</button>
+                        <a href="/services/lessons.html">
+                            <button class="btn btn-warning">Learn More</button>
+                        </a>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="carousel-blurred-img" src="Images/Other/logo.png" />
-                    <img class="d-block w-100 carousel-img" src="Images/Other/logo.png" alt="Paul Raucci, the owner" />
+                    <img class="carousel-blurred-img" src="Images/Headshots/Paul_Raucci.png" />
+                    <img class="d-block w-100 carousel-img" src="Images/Headshots/Paul_Raucci.png" alt="Paul Raucci, the owner" />
                     <span class="carousel-caption d-none d-md-block text-dark h-25 w-50 m-auto" style="bottom: -10%; filter: blur(75px); background-color: black"></span>
                     <div class="carousel-caption d-block pb-2 pb-sm-5">
                         <h5 class="carousel-title pb-3 pb-sm-0">Meet Paul</h5>
                         <p class="d-none d-sm-block pb-3">Know your seller</p>
-                        <button class="btn btn-warning">Learn More</button>
+                        <a href="/about_us/meet_the_owner.html">
+                            <button class="btn btn-warning">Learn More</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -228,6 +179,7 @@
             <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Howell Township Location</h1>
             <a
                 style="text-decoration-color: #6c757d"
+                target="_blank"
                 href="https://www.google.com/maps/dir//5985+US-9,+Howell+Township,+NJ+07731/@40.1231118,-74.22319,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c17f582c6bffff:0xaad6109c1afa1085!2m2!1d-74.2206151!2d40.1231077?entry=ttu"
             >
                 <p class="text-muted pt-4 mb-4 text-center">5985 U.S. 9, Howell Township, NJ 07731</p>
@@ -292,8 +244,13 @@
                     </tr>
                 </table>
                 <div class="mx-auto pt-5">
-                    <a class="hero-button btn btn-lg my-sm-0 m-3 mx-3 btn-outline-warning" href="#">Contact Us</a>
-                    <a class="hero-button btn btn-lg my-sm-0 m-3 mx-3 btn-outline-warning" href="#">Get Directions</a>
+                    <a class="hero-button btn btn-lg my-sm-0 m-3 mx-3 btn-outline-warning" href="/about_us/contact.html">Contact Us</a>
+                    <a
+                        class="hero-button btn btn-lg my-sm-0 m-3 mx-3 btn-outline-warning"
+                        href="https://www.google.com/maps/dir//5985+US-9,+Howell+Township,+NJ+07731/@40.1231118,-74.22319,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c17f582c6bffff:0xaad6109c1afa1085!2m2!1d-74.2206151!2d40.1231077?entry=ttu"
+                        target="_blank"
+                        >Get Directions</a
+                    >
                 </div>
             </div>
         </div>
@@ -301,62 +258,15 @@
         <!-- 
             Footer
         -->
-        <div class="footer m-0 d-flex justify-content-center align-items-center flex-column pt-2">
-            <div class="m-0 d-flex justify-content-center px-0" style="width: 100vw">
-                <footer class="container row row-cols-1 row-cols-sm-2 row-cols-md-5 justify-content-around pt-5 px-0 m-0 text-center text-sm-left">
-                    <div class="col mb-5 mb-sm-0">
-                        <h5 class="text-white">About Us</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="/about_us/store_information.html" class="nav-link p-0 text-body-secondary">Store Information</a></li>
-                            <li class="nav-item mb-2"><a href="/about_us/meet_the_owner.html" class="nav-link p-0 text-body-secondary">Meet the Owner</a></li>
-                            <li class="nav-item mb-2"><a href="/about_us/faq.html" class="nav-link p-0 text-body-secondary">FAQ</a></li>
-                            <li class="nav-item mb-2"><a href="/about_us/contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mb-5 mb-sm-0">
-                        <h5 class="text-white">Products</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Reverb Collection</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">In Store Only</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Rentals</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sheet Music</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mb-5 mb-sm-0">
-                        <h5 class="text-white">Services</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Repairs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Lessons</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mb-5 mb-sm-0">
-                        <ul class="nav flex-column">
-                            <h5 class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary store">The Guitar Shop</a></h5>
-                            <li class="nav-item mb-2"><a href="tel:7329429500" class="nav-link p-0 text-body-secondary">(732) 942-9500</a></li>
-                            <li class="nav-item mb-2"><a href="mailto:Paulmz@verizon.net" class="nav-link p-0 text-body-secondary">Paulmz@verizon.net</a></li>
-                            <li class="nav-item mb-2">
-                                <a
-                                    href="https://www.google.com/maps/dir//5985+US-9,+Howell+Township,+NJ+07731/@40.1231118,-74.22319,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c17f582c6bffff:0xaad6109c1afa1085!2m2!1d-74.2206151!2d40.1231077?entry=ttu"
-                                    class="nav-link p-0 text-body-secondary"
-                                    >5985 U.S. 9 Howell Township, NJ 07731</a
-                                >
-                            </li>
-                            <li class="nav-link p-0 text-body-secondary text-white">
-                                <a>&copy; 2023 &nbsp;|&nbsp; <a href="https://michaelpeluso.github.io/">Michael Peluso</a></a>
-                            </li>
-                        </ul>
-                    </div>
-                </footer>
-            </div>
-            <a class="nav-link" href="index.html"><img src="Images/Other/logo.png" class="zoom bi me-2 mb-4 pb-4" width="100" alt="The Guitar Shop Logo" /></a>
-        </div>
+        <footer></footer>
 
+        <!--
+            Scripts
+        -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="/js/index.js"></script>
-        <!-- Only for 'Home' -->
         <script src="/js/reverb.js"></script>
     </body>
 </html>

@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script>
-            fetch("/txt/head.txt")
-                .then((response) => response.text())
-                .then((data) => {
-                    $("head").append(data);
-                });
-        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/reverb.css" />
+        <link rel="stylesheet" href="/css/index.css" />
     </head>
     <body>
         <!-- 
@@ -27,17 +23,218 @@
             <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Our Online Showcase</h1>
             <p class="text-muted pt-4 mb-4 text-center">Browse a selection of premier products available for online purchase.</p>
         </div>
-        <div class="container px-4 text-white" id="featured-3">
-            <h3 class="text-warning">Notice</h3>
+        <!--
+            Filters
+        -->
+        <div class="row d-flex justify-content-start justify-content-lg-center text-white pl-lg-0 pl-4 mx-5">
+            <div class="d-flex flex-column col-lg-2 col-md-6 px-5 py-3">
+                <h4 style="font-weight: 400">Category</h4>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', '')" checked />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Any Category</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'acoustic-guitars')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Acoustic Guitars</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'amps')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Amps</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'bass-guitars')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Bass Guitars</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'drums-and-percussion')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Drums & Percussion</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'effects-and-pedals')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Effects & Pedals</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'electric-guitars')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Electric Guitars</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="category" onclick="filteredListings.attr('data-reverb-search-product-type', 'keyboards-and-synths')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Keyboards & Synths</p>
+                </label>
+            </div>
+            <div class="d-flex flex-column col-lg-2 col-md-6 px-5 py-3">
+                <h4 style="font-weight: 400">Condition</h4>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="condition" onclick="filteredListings.attr('data-reverb-search-condition', '')" checked />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Any Condition</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="condition" onclick="filteredListings.attr('data-reverb-search-condition', 'new')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">New</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="condition" onclick="filteredListings.attr('data-reverb-search-condition', 'used')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Used</p>
+                </label>
+            </div>
+            <div class="d-flex flex-column col-lg-2 col-md-6 px-5 py-3">
+                <h4 class="m-0" style="font-weight: 400">Year</h4>
+                <p class="mb-2" style="margin: 0; font-size: 0.75rem">* If Listed</p>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="year" onclick="filteredListings.attr('data-reverb-search-year-min', ''); filteredListings.attr('data-reverb-search-year-max', '')" checked />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Any Year</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="year" onclick="filteredListings.attr('data-reverb-search-year-min', ''); filteredListings.attr('data-reverb-search-year-max', '1960')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">1960 and Earlier</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="year" onclick="filteredListings.attr('data-reverb-search-year-min', '1960'); filteredListings.attr('data-reverb-search-year-max', '2000')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">1960 - 2000</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="year" onclick="filteredListings.attr('data-reverb-search-year-min', '2000'); filteredListings.attr('data-reverb-search-year-max', '2015')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">2000 - 2015</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="year" onclick="filteredListings.attr('data-reverb-search-year-min', '2010'); filteredListings.attr('data-reverb-search-year-max', '2030')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">2015 - Present</p>
+                </label>
+            </div>
+            <div class="d-flex flex-column col-lg-2 col-md-6 px-5 py-3">
+                <h4 style="font-weight: 400">Price</h4>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="price" onclick="filteredListings.attr('data-reverb-search-price-min', ''); filteredListings.attr('data-reverb-search-price-max', '')" checked />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Any Price</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="price" onclick="filteredListings.attr('data-reverb-search-price-min', '0'); filteredListings.attr('data-reverb-search-price-max', '200')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Under $200</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="price" onclick="filteredListings.attr('data-reverb-search-price-min', '200'); filteredListings.attr('data-reverb-search-price-max', '500')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">$200 - $499</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="price" onclick="filteredListings.attr('data-reverb-search-price-min', '500'); filteredListings.attr('data-reverb-search-price-max', '1000')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">$500 - $999</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="price" onclick="filteredListings.attr('data-reverb-search-price-min', '1000'); filteredListings.attr('data-reverb-search-price-max', '')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">$1,000 and Over</p>
+                </label>
+            </div>
+            <div class="d-flex flex-column col-lg-2 col-md-6 px-5 py-3">
+                <h4 style="font-weight: 400">Sort By</h4>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="sortBy" onchange="filteredListings.attr('data-reverb-search-sort', '')" checked />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Most Recent</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="sortBy" onchange="filteredListings.attr('data-reverb-search-sort', 'price|asc')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Low to High</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="sortBy" onchange="filteredListings.attr('data-reverb-search-sort', 'price|desc')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">High to Low</p>
+                </label>
+            </div>
+            <div class="d-flex flex-column col-lg-2 col-md-6 px-5 py-3">
+                <h4 style="font-weight: 400">Other Filters</h4>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="personalized" onchange="filteredListings.attr('data-reverb-search-query', '')" checked />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">All Items</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="personalized" onchange="filteredListings.attr('data-reverb-search-query', 'Cort')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Brand: Cort</p>
+                </label>
+                <label class="checkbox-item d-flex align-items-center">
+                    <input type="radio" name="personalized" onchange="filteredListings.attr('data-reverb-search-query', 'Oscar Schmidt')" />
+                    <span class="checkmark position-absolute"></span>
+                    <p class="ml-4 mb-0 single-line">Brand: Oscar Schmidt</p>
+                </label>
+            </div>
+        </div>
+
+        <!--
+            Listings
+        -->
+        <div class="text-white d-flex flex-column align-items-center">
+            <div class="d-flex flex-column flex-sm-row justify-content-center pb-5 pt-sm-0">
+                <button onclick="applyFilters()" class="btn btn-lg btn-outline-warning mx-3 mt-4 mt-sm-0">Apply Filters</button>
+            </div>
+            <div id="reverb-listings" data-reverb-embed-listings data-reverb-search-shop="theguitarshopnj" data-reverb-search-per-page="200" data-reverb-currency="USD"></div>
+            <!--
+                Sort
+                    data-reverb-search-sort="price|asc"
+                    data-reverb-search-sort="price|desc"
+
+                Possible filters
+                    data-reverb-search-product-type="keyboards
+                    data-reverb-search-query="red"
+                    data-reverb-search-price-max="200"
+                    data-reverb-search-price-min="200"
+                    data-reverb-search-year-max="2020"
+                    data-reverb-search-year-min="2020"
+                    data-reverb-search-brand-slug="cort"
+                    data-reverb-search-condition="used" (b-stock, like-new, mint, excellent, very-good, good, fair, poor, non-functioning) or (new, used)?
+                    data-reverb-search-on-sale="true" //none
+                    data-reverb-search-zero-percent-financing="true" //none
+            -->
+        </div>
+
+        <!-- Divider -->
+        <div class="divider my-5"></div>
+
+        <!--
+            Notice
+        -->
+        <div class="container px-4 text-light" id="featured-3">
+            <h1 class="text-white text-center border-bottom mt-sm-4 mt-4 mb-0 pb-4">Notice</h1>
+            <p class="text-muted pt-4 mb-4 text-center">Please continue reading below.</p>
+        </div>
+        <div class="container px-4 text-white pb-3" id="featured-3">
             <p>
                 &emsp;The following represents our available products showcased on our online platform. Please note that this compilation simply offers a glimpse into the diverse range of items we offer. For a comprehensive overview of our complete
                 inventory, we encourage you to visit our store in person.
             </p>
+            <p class="py-3">
+                &emsp;All transactions for these items will be conducted through Reverb's payment processing system. Although we're readily available to assist you with any product-related concerns, it's important to note that we don't have the
+                capacity to address online payment matters.
+            </p>
         </div>
-        <div class="d-flex justify-content-center pt-4 pb-5">
-            <a href="/products/in_store_only.html" class="btn btn-lg btn-outline-warning mx-3">In-Store Collection</a>
-            <a href="/about_us/contact.html" class="btn btn-lg btn-outline-warning mx-3">Contact Us</a>
-            <a href="/about_us/faq.html" class="btn btn-lg btn-outline-warning mx-3">Frequently Asked Questions</a>
+        <div class="d-flex justify-content-center flex-wrap pb-5">
+            <a href="/products/in_store_only.html" class="btn btn-lg btn-outline-warning mx-3 mb-3">In-Store Collection</a>
+            <a href="https://reverb.com/shop/theguitarshopnj" target="_blank" class="btn btn-lg btn-outline-warning mx-3 mb-3">See Listings On Reverb</a>
+            <a href="/about_us/faq.html" class="btn btn-lg btn-outline-warning mx-3 mb-3">Frequently Asked Questions</a>
+            <a href="/about_us/contact.html" class="btn btn-lg btn-outline-warning mx-3 mb-sm-3">Contact Us</a>
         </div>
 
         <!-- 
@@ -52,5 +249,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="/js/index.js"></script>
+        <script src="/js/reverb.js"></script>
     </body>
 </html>

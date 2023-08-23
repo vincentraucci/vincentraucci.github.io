@@ -1,5 +1,31 @@
 $(document).ready(function () {
     /*
+    Inject Head, Nav, and Footer
+    */
+    fetch("/templates/head.html")
+        .then((response) => response.text())
+        .then((data) => {
+            $("head").prepend(data);
+            $("nav").addClass("sticky-top");
+        });
+    fetch("/templates/nav.html")
+        .then((response) => response.text())
+        .then((data) => {
+            $("nav").html(data);
+
+            var currentFile = window.location.pathname.split("/")[1];
+            if (currentFile == "index.html") {
+                $("#nav-home").addClass("active");
+            } else {
+                $("#nav-" + currentFile).addClass("active");
+            }
+        });
+    fetch("/templates/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+            $("footer").html(data);
+        });
+    /*
     Navbar Scroll Effect
     */
     $(window).scroll(function () {
@@ -38,35 +64,5 @@ $(document).ready(function () {
 
     if ($(window).width() < 768) {
         $(".landing-video").removeClass("img-fluid");
-    }
-
-    /*
-    Paste Head & Footer
-    */
-    fetch("/txt/head.txt")
-        .then((response) => response.text())
-        .then((data) => {
-            $("head").append(data);
-        });
-    if ($("nav").length > 0) {
-        fetch("/txt/nav.txt")
-            .then((response) => response.text())
-            .then((data) => {
-                $("nav").html(data);
-
-                var currentFile = window.location.pathname.split("/")[1];
-                if (currentFile == "index.html") {
-                    $("#nav-home").addClass("active");
-                } else {
-                    $("#nav-" + currentFile).addClass("active");
-                }
-            });
-    }
-    if ($("footer").length > 0) {
-        fetch("/txt/footer.txt")
-            .then((response) => response.text())
-            .then((data) => {
-                $("footer").html(data);
-            });
     }
 });
