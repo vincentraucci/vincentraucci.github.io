@@ -56,13 +56,4 @@ $(document).ready(function () {
             .css("transform", isRotated ? "rotate(0deg)" : "rotate(45deg)")
             .data("rotated", !isRotated);
     });
-
-    /*
-    Alter landing video scale 
-    $("#video-cover").height($(".landing-video").height() - $("#main-nav").height());
-
-    if ($(window).width() < 768) {
-        $(".landing-video").removeClass("img-fluid");
-    }
-    */
 });
