@@ -25,26 +25,39 @@ $(document).ready(function () {
         .then((data) => {
             $("footer").html(data);
         });
+
     /*
     Navbar Scroll Effect
     */
-    $(window).scroll(function () {
-        if (window.location.href.includes("index.html")) {
-            if ($(window).scrollTop() > $(".landing-video").offset().top + $(".landing-video").outerHeight() * 0.75) {
-                $("#main-nav").addClass("bg-black").css({ "text-shadow": "none" }).addClass("nav-shadow");
-                $(".dropdown-menu").addClass("bg-black").removeClass("bg-transparent").addClass("nav-shadow");
+    var $mainNav = $("#main-nav");
+    var $dropdownMenu = $(".dropdown-menu");
+    var navOpen = false;
 
-                $(".navbar-toggler").on("click", function () {
-                    $("#main-nav").addClass("bg-black");
-                });
+    function updateNavOnScroll() {
+        console.log(navOpen);
+        if (window.location.href.includes("index.html")) {
+            if ($(window).scrollTop() === 0 && !navOpen) {
+                $mainNav.removeClass("bg-black").removeClass("nav-shadow");
+                $dropdownMenu.removeClass("bg-black").addClass("bg-transparent").removeClass("nav-shadow");
             } else {
-                $("#main-nav").removeClass("bg-black").css({ "text-shadow": "black 0px 0 20px" }).removeClass("nav-shadow");
-                $(".dropdown-menu").removeClass("bg-black").addClass("bg-transparent").removeClass("nav-shadow");
+                $mainNav.addClass("bg-black").addClass("nav-shadow");
+                $dropdownMenu.addClass("bg-black").removeClass("bg-transparent").addClass("nav-shadow");
             }
-        } else {
-            $("#main-nav").addClass("bg-black").css({ "text-shadow": "none" });
-            $(".dropdown-menu").addClass("bg-black").removeClass("bg-transparent");
         }
+    }
+    updateNavOnScroll();
+    $(window).scroll(updateNavOnScroll);
+
+    $(".navbar-toggler").click(function () {
+        navOpen = !navOpen;
+        console.log("clicled");
+        if ($(window).scrollTop() === 0) {
+            $mainNav.addClass("bg-black");
+            if (!navOpen) {
+                $mainNav.removeClass("bg-black");
+            }
+        }
+        $(".toggleImage").click();
     });
 
     /*
