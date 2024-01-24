@@ -85,14 +85,10 @@ input:focus {
     Nav Bar
 */
 .nav-shadow {
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-}
-.nav-link {
-    transition: 0.2s;
+    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.15) !important;
 }
 
 .dropdown-item:hover {
-    background-color: transparent;
     text-decoration: underline;
     background-color: var(--primary-color) !important;
 }
@@ -316,7 +312,7 @@ a.store:hover {
 -------------------------
 */
 
-/* Small devices (landscape phones, 576px and up) and Medium devices (tablets, 768px and up)*/
+/* Small devices (phones, 576px and below) and Medium devices (tablets, 768px)*/
 @media (max-width: 768px) {
     /* Basics */
     .sm-hide {
@@ -333,11 +329,6 @@ a.store:hover {
     }
     p {
         font-size: 1rem !important;
-    }
-
-    /* Nav Bar */
-    .nav-shadow {
-        box-shadow: none;
     }
 
     /* Home */
@@ -406,11 +397,10 @@ a.store:hover {
         -webkit-transform: scale(1.5); /* Safari 3-8 */
         transform: scale(1.5);
     }
+
     /* Nav Bar */
-    .dropdown-item:hover {
-        background-color: black;
-        transition: background-color 200ms linear;
-        text-decoration: underline;
+    .dropdown-shadow {
+        box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.15) !important;
     }
 
     /* Home */
