@@ -32,7 +32,6 @@ $(document).ready(function () {
     if (window.location.href.includes("index.html")) {
         var navOpen = false;
         $("#main-nav").addClass("bg-transparent");
-        console.log($("#main-nav").classList.value);
 
         $(window).scroll(function () {
             if ($(window).scrollTop() <= 0) {
