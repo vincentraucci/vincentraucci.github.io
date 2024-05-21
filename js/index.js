@@ -42,25 +42,24 @@ $(document).ready(function () {
 function updateNavScroll() {
     if (window.location.href == "http://theguitarshop.co/" || window.location.href == "http://127.0.0.1:5500/") {
         var navOpen = false;
-        $("nav").find("*").css("transition", "background-color 100ms linear, nav-shadow 100ms linear");
-        $("nav").find("*").addClass("bg-transparent").removeClass("nav-shadow");
+        $("#main-nav").css("transition", "background-color 100ms linear, nav-shadow 100ms linear");
+        $("#main-nav").addClass("bg-transparent").removeClass("nav-shadow");
 
         $(window).scroll(function () {
             var atTop = $(window).scrollTop() <= 0;
-            $("nav").find("*").toggleClass("bg-transparent", atTop);
-            $("#main-nav").toggleClass("nav-shadow", !atTop);
-            $("dropdown-menu").toggleClass("nav-shadow", !atTop);
+            $("#main-nav").toggleClass("bg-transparent", atTop).toggleClass("nav-shadow", !atTop);
         });
 
-        $("nav")
+        $("#main-nav")
             .mouseenter(function () {
-                $("nav").find("*").removeClass("bg-transparent");
-                $("#main-nav").addClass("nav-shadow");
-                $("dropdown-menu").addClass("nav-shadow");
+                $("#main-nav").removeClass("bg-transparent").addClass("nav-shadow");
             })
             .mouseleave(function () {
                 if ($(window).scrollTop() <= 0) {
-                    $("nav").find("*").addClass("bg-transparent").removeClass("nav-shadow");
+                    $("#main-nav").addClass("bg-transparent").removeClass("nav-shadow");
+                    $(".dropdown-menu").mouseleave(function () {
+                        $(this).removeClass("show");
+                    });
                 }
             });
 
