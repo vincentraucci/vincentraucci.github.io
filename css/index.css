@@ -332,6 +332,9 @@ a.store:hover {
     p {
         font-size: 1rem !important;
     }
+    .btn {
+        font-size: 1rem !important;
+    }
 
     /* Home */
     .carousel-img {
