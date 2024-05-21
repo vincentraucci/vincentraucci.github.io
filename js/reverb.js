@@ -1,8 +1,19 @@
-var scripts = [];
-var loaded = false;
+window.addEventListener ? window.addEventListener("load", _RRR, !1) : window.attachEvent ? window.attachEvent("onload", _RRR) : (window.onload = _RRR);
+
+var filteredListings = $("<div>", {
+    id: "reverb-listings",
+    "data-reverb-embed-listings": "",
+    "data-reverb-search-shop": "theguitarshopnj",
+    "data-reverb-search-per-page": "200",
+    "data-reverb-currency": "USD",
+    "data-reverb-search-sort": "",
+    style: "display: block;",
+});
+
+addObserver();
 
 function _RRR() {
-    loaded = false;
+    scripts = [];
     for (var i = 0; i < scripts.length; i++) {
         scripts[i].remove();
     }
@@ -17,20 +28,31 @@ function _RRR() {
     };
     document.body.appendChild(e);
 }
-window.addEventListener ? window.addEventListener("load", _RRR, !1) : window.attachEvent ? window.attachEvent("onload", _RRR) : (window.onload = _RRR);
-
-var filteredListings = $("<div>", {
-    id: "reverb-listings",
-    "data-reverb-embed-listings": "",
-    "data-reverb-search-shop": "theguitarshopnj",
-    "data-reverb-search-per-page": "200",
-    "data-reverb-currency": "USD",
-    "data-reverb-search-sort": "",
-    style: "display: block;",
-});
 
 function applyFilters() {
-    console.log(filteredListings.attr("data-reverb-search-sort"));
-    $("#reverb-listings").empty().replaceWith(filteredListings);
-    _RRR();
+    console.log("button pressed");
+    $("#reverb-error").text("Loading items...");
+    if (filteredListings) {
+        $("#reverb-listings").empty().replaceWith(filteredListings);
+        _RRR();
+    }
+}
+
+// event listener for item list
+function addObserver() {
+    var $div = $("#reverb-content");
+    var config = { childList: true, subtree: true, characterData: true };
+
+    var callback = function (mutationsList, observer) {
+        for (var mutation of mutationsList) {
+            if (mutation.type === "childList" || mutation.type === "characterData") {
+            }
+
+            const message = $("#reverb-listings").is(":empty") ? "Regrettably, no items matching these filters are currently available online. We invite you to visit us in person to explore our full selection." : "";
+            $("#reverb-error").text(message);
+        }
+    };
+
+    var observer = new MutationObserver(callback);
+    observer.observe($div[0], config);
 }

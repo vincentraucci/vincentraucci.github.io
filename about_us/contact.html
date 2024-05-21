@@ -32,25 +32,29 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputName">Full Name</label>
-                        <input name="name" class="form-control form-input" id="inputFName" placeholder="John Doe" />
+                        <input name="name" class="form-control form-input" id="inputFName" placeholder="John Doe" required />
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputEmail4">Email</label>
-                        <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="johndoe@theguitarshop.co" />
+                        <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="johndoe@theguitarshop.co" required />
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputLName">Subject</label>
-                        <input name="subject_variable" class="form-control" id="inputSubject" placeholder="Saying Hello!" />
+                        <input name="subject_variable" class="form-control" id="inputSubject" placeholder="Saying Hello!" required />
                         <input name="subject" type="hidden" value="{{ name }}: {{ subject_variable }}" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Email Contents</label>
-                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Hello to all at The Guitar Shop!"></textarea>
+                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Hello to all at The Guitar Shop!" required></textarea>
                 </div>
                 <label>&nbsp;</label>
                 <div class="d-flex justify-content-center">
-                    <input type="submit" class="btn btn-lg btn-outline-warning" value="Send to paulmz@verizon.net" />
+                    <input type="submit" class="btn btn-lg btn-outline-warning" value="Send to vinny@theguitarshop.co" />
+                </div>
+                <br />
+                <div class="d-flex justify-content-center">
+                    <a class="hero-button btn btn-lg my-sm-0 m-3 mx-3 btn-outline-warning" href="tel:7329429500">Call us at 732 942 9500</a>
                 </div>
             </form>
         </div>
@@ -67,59 +71,63 @@
         </div>
         <div class="d-flex flex-column text-center">
             <div class="d-flex justify-content-center w-100 flex-wrap py-3">
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/Paul_Raucci_2.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">Paul <br />Raucci</h2>
-                    <p class="text-muted m-0" style="font-weight: 400">Store Owner</p>
-                    <span></span>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/Paul_Raucci_2.jpg" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">Paul Raucci</h2>
+                    <div class="d-flex flex-column text-white">
+                        <p class="text-muted m-0" style="font-weight: 400">Store Owner</p>
+                        <span class="text-muted">Guitar</span>
+                    </div>
                     <a href="tel:7329429500">(732) 942-9500</a>
                 </div>
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/Vincent_Raucci.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">Vincent<br />Raucci</h2>
-                    <p class="text-muted m-0" style="font-weight: 400">Store Manger</p>
-                    <span></span>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/Vincent_Raucci.jpg" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">Vincent Raucci</h2>
+                    <div class="d-flex flex-column text-white">
+                        <p class="text-muted m-0" style="font-weight: 400">Store Manager</p>
+                        <br />
+                    </div>
                     <a href="tel:609286321">(609) 286-3218</a>
                 </div>
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/Jonny_Dey.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">Jonny<br />Dey</h2>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/Jonny_Dey.jpg" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">Jonny Dey</h2>
                     <div class="d-flex flex-column text-white">
                         <p class="text-muted m-0" style="font-weight: 400">Lead Instructor</p>
                         <span class="text-muted">Guitar, bass, piano, vocals</span>
                     </div>
                     <a href="tel:7326063065">(732) 606-3065</a>
                 </div>
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/Tommy_Raucci.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">Tommy<br />Raucci</h2>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/Tommy_Raucci.jpg" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">Tommy Raucci</h2>
                     <div class="d-flex flex-column text-white">
                         <p class="text-muted m-0" style="font-weight: 400">Instructor</p>
                         <span class="text-muted">Guitar, bass</span>
                     </div>
                     <a href="tel:6095007246">(609) 500-7246</a>
                 </div>
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/Paul_Raucci_Jr.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">Paul<br />Raucci Jr.</h2>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/Paul_Raucci_Jr.jpg" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">Paul Raucci Jr.</h2>
                     <div class="d-flex flex-column text-white">
                         <p class="text-muted m-0" style="font-weight: 400">Instructor</p>
                         <span class="text-muted">Piano, drums</span>
                     </div>
                     <a href="tel:6095008385">(609) 500-8385</a>
                 </div>
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/Biran_Tess.jpg" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">Brian<br />Tess</h2>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/Biran_Tess.jpg" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">Brian Tess</h2>
                     <div class="d-flex flex-column text-white">
                         <p class="text-muted m-0" style="font-weight: 400">Instructor</p>
                         <span class="text-muted">Guitar</span>
                     </div>
                     <a href="tel:7329666677">(732) 966-6677</a>
                 </div>
-                <div class="contact col-sm-10 col-md-4 col-lg-3 col-xl-2 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
-                    <img src="/Images/Headshots/unknown.png" class="img-fluid rounded-circle" style="max-width: 175px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
-                    <h2 class="name m-0" style="font-weight: 400">John<br />Corallo</h2>
+                <div class="contact col-sm-10 col-md-4 col-xl-3 rounded p-5 m-3 border d-flex flex-column align-items-center" style="gap: 2rem">
+                    <img src="/Images/Headshots/unknown.png" class="img-fluid rounded-circle" style="max-width: 200px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)" alt="" />
+                    <h2 class="name m-0" style="font-weight: 400">John Corallo</h2>
                     <div class="d-flex flex-column text-white">
                         <p class="text-muted m-0" style="font-weight: 400">Instructor</p>
                         <span class="text-muted">Drums</span>
@@ -128,8 +136,8 @@
             </div>
             <div class="mb-4"></div>
 
-            <!--            <
-            div class="d-flex justify-content-center">
+            <!--            
+            <div class="d-flex justify-content-center">
                 <a class="hero-button btn btn-lg mt-3 mb-5 btn-outline-warning" href="https://groups.google.com/forum/#!forum/theguitarshopnews/join" target="_blank">Join Our Mailing List</a>
             </div>
             -->
@@ -143,7 +151,11 @@
         <!--
             Scripts
         -->
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+            $("send-email").submit(function (e) {
+
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="/js/index.js"></script>
