@@ -10,6 +10,7 @@ var filteredListings = $("<div>", {
     style: "display: block;",
 });
 
+noItems = false;
 addObserver();
 
 function _RRR() {
@@ -30,7 +31,7 @@ function _RRR() {
 }
 
 function applyFilters() {
-    console.log("button pressed");
+    console.log("loading");
     $("#reverb-error").text("Loading items...");
     if (filteredListings) {
         $("#reverb-listings").empty().replaceWith(filteredListings);
@@ -48,8 +49,16 @@ function addObserver() {
             if (mutation.type === "childList" || mutation.type === "characterData") {
             }
 
-            const message = $("#reverb-listings").is(":empty") ? "Regrettably, no items matching these filters are currently available online. We invite you to visit us in person to explore our full selection." : "";
-            $("#reverb-error").text(message);
+            if (noItems) {
+                const message = $("#reverb-listings").children(0).children().length != 0 ? "" : "Regrettably, no items matching these filters are currently available online. We invite you to visit us in person to explore our full selection.";
+                $("#reverb-error").text(message);
+                noItems = false;
+                console.log("message ", $("#reverb-listings").is(":empty"));
+            } else {
+                $("#reverb-error").text("Loading items...");
+                noItems = true;
+                console.log("empty");
+            }
         }
     };
 
