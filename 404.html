@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> </head>
+    <body>
+        <!--
+            404
+        -->
+        <div class="d-flex justify-content-center py-5">
+            <h1 class="display text-warning" style="font-size: 1000%">404</h1>
+        </div>
+
+        <!--
+            Oops
+        -->
+        <div class="container px-4 text-white pb-3" id="featured-3">
+            <p>&emsp;Oops, looks like you took a wrong turn. Make sure to double check your URL for any typos.</p>
+            <p class="pt-3">
+                &emsp;Click <a class="d-inline text-warning nav-link p-0" role="button" onclick="goBack()">here</a>
+                to return back to your previous page or
+                <a href="index.html" class="d-inline text-warning nav-link p-0" role="button"> here </a>
+                to visit our homepage.
+            </p>
+        </div>
+        <div class="mb-5"></div>
+
+        <!-- 
+            Footer
+        -->
+        <footer></footer>
+
+        <!--
+            Scripts
+        -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="/js/index.js"></script>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>
