@@ -19,24 +19,27 @@ $(document).ready(function () {
             } else {
                 $("#nav-" + currentFile).addClass("active");
             }
-            updateNavScroll();
+
+            // call after nav button is loaded
+            handleToggleButton();
         });
     fetch("/templates/footer.html")
         .then((response) => response.text())
         .then((data) => {
             $("footer").html(data);
         });
+});
 
-    // Menu Button Spin Animation
-    $(".toggleImage").click(handleRotationEffect);
-
-    function handleRotationEffect() {
-        const isRotated = $(".toggleImage").data("rotated");
-        $(".toggleImage")
+// Menu Button Spin Animation
+function handleToggleButton() {
+    $(".toggleImage").click(function () {
+        console.log("click");
+        const isRotated = $(this).data("rotated");
+        $(this)
             .css("transform", isRotated ? "rotate(0deg)" : "rotate(45deg)")
             .data("rotated", !isRotated);
-    }
-});
+    });
+}
 
 // google reviews
 function fetchReviews() {
