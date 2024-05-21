@@ -38,41 +38,6 @@ $(document).ready(function () {
     }
 });
 
-// Navbar Scroll Effect
-function updateNavScroll() {
-    if (window.location.href == "http://theguitarshop.co/" || window.location.href == "http://127.0.0.1:5500/") {
-        var navOpen = false;
-        $("#main-nav").css("transition", "background-color 100ms linear, nav-shadow 100ms linear");
-        $("#main-nav").addClass("bg-transparent").removeClass("nav-shadow");
-
-        $(window).scroll(function () {
-            var atTop = $(window).scrollTop() <= 0;
-            $("#main-nav").toggleClass("bg-transparent", atTop).toggleClass("nav-shadow", !atTop);
-        });
-
-        $("#main-nav")
-            .mouseenter(function () {
-                $("#main-nav").removeClass("bg-transparent").addClass("nav-shadow");
-            })
-            .mouseleave(function () {
-                if ($(window).scrollTop() <= 0) {
-                    $("#main-nav").addClass("bg-transparent").removeClass("nav-shadow");
-                    $(".dropdown-menu").mouseleave(function () {
-                        $(this).removeClass("show");
-                    });
-                }
-            });
-
-        $(document).on("click", ".navbar-toggler", function () {
-            navOpen = !navOpen;
-            if ($(window).scrollTop() <= 0) {
-                $("#main-nav").toggleClass("bg-transparent", navOpen).toggleClass("nav-shadow", navOpen);
-            }
-            handleRotationEffect();
-        });
-    }
-}
-
 // google reviews
 function fetchReviews() {
     fetch("https://mybusiness.googleapis.com/v4/accounts/{accountId}/locations/{locationId}/reviews")
